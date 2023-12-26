@@ -1,5 +1,5 @@
-const utils = require("./utils.js");
-const points = require("../config/points.json");
+const utils = require("./utils.js"); // Import utility functions
+const points = require("../config/points.json"); // Load points configuration
 
 const split_keywords = [
   "split",
@@ -28,14 +28,14 @@ async function playRound(algorithm1, algorithm2) {
   let player2Score = 0;
   console.log("=== New Round ===");
 
-  // Get decisions from two players (you can replace this with algorithm decisions later)
-  const player1Decision = await algorithm1.makeDecision(); // Get player 2's decision
-  const player2Decision = await algorithm2.makeDecision(); // Get player 2's decision
+  // Get decisions from two players using their algorithms
+  const player1Decision = await algorithm1.makeDecision();
+  const player2Decision = await algorithm2.makeDecision();
 
   console.log(`Player 1 decision: ${player1Decision}`);
   console.log(`Player 2 decision: ${player2Decision}`);
 
-  // Evaluate the decisions and update scores (you can extend this later)
+  // Evaluate the decisions and update scores
   if (
     split_keywords.includes(player1Decision) &&
     split_keywords.includes(player2Decision)

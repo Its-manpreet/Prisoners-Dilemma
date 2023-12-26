@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Manpreet",
-  "license": "ISC",
+  "license": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Its-manpreet/Prisoners-Dilemma.git"
