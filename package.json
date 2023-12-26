@@ -1,0 +1,26 @@
+{
+  "name": "split-or-steal",
+  "version": "1.0.0",
+  "description": "Prisoner's Dilemma Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manpreet",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Its-manpreet/Prisoners-Dilemma.git"
+  },
+  "keywords": [
+    "game",
+    "game-theory",
+    "prisoners-dilemma",
+    "dilemma",
+    "algorithms"
+  ],
+  "bugs": {
+    "url": "https://github.com/Its-manpreet/Prisoners-Dilemma/issues"
+  },
+  "homepage": "https://github.com/Its-manpreet/Prisoners-Dilemma#readme"
+}

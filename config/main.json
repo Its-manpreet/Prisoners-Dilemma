@@ -1,0 +1,5 @@
+{
+  "rounds": 3,
+  "algorithm1": "manual.js",
+  "algorithm2": "example.js"
+}
