@@ -46,9 +46,9 @@ node index.js
 
 ## Folder Structure
 
-- src/: Contains utility functions and the main game loop.
-- algorithms/: Store individual algorithm files here.
-- config/: Configuration files for the game.
+- `src/`: Contains utility functions and the main game loop.
+- `algorithms/`: Store individual algorithm files here.
+- `config/`: Configuration files for the game.
 
 ## Contributions
 
