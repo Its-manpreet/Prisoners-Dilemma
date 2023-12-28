@@ -1,3 +1,5 @@
+const name = "Forgiving tit-for-tat"
+
 //allowed keywords for split
 const split_keywords = [
   "split",
@@ -22,11 +24,11 @@ const steal_keywords = [
 ];
 
 async function makeDecision(prevDecision, curround) {
-  if (steal_keywords.includes(prevDecision) && Math.random() > 0.9 ){
-    return "betray"
+  if (steal_keywords.includes(prevDecision) && Math.random() > 0.9) {
+    return "betray";
   } else {
-    return curround === 0 ? "cooperate" : prevDecision
+    return curround === 0 ? "cooperate" : prevDecision;
   }
 }
 
-module.exports = { makeDecision };
+module.exports = { makeDecision, name };

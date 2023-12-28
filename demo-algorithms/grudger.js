@@ -1,3 +1,5 @@
+const name = "Grudger"
+
 //allowed keywords for split
 const split_keywords = [
   "split",
@@ -21,15 +23,15 @@ const steal_keywords = [
   "B",
 ];
 
-let betrayed = false
+let betrayed = false;
 
 async function makeDecision(prevDecision, curround) {
-  if (steal_keywords.includes(prevDecision) || betrayed){
-    betrayed = true
+  if (steal_keywords.includes(prevDecision) || betrayed) {
+    betrayed = true;
     return "betray";
   } else {
-    return "split"
+    return "split";
   }
 }
 
-module.exports = { makeDecision };
+module.exports = { makeDecision, name };

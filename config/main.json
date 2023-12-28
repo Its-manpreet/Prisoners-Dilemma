@@ -3,5 +3,9 @@
   "show_choices": false,
   "per_round_scores": false,
   "algorithm1": "example.js",
-  "algorithm2": "example.js"
+  "algorithm2": "example.js",
+  "tournament": true,
+  "include_self_matches": true,
+  "show_tournaments_members": false,
+  "show_tournaments_round_scores": false
 }

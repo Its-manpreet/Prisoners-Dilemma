@@ -1,3 +1,5 @@
+const name = "Example"
+
 //allowed keywords for split
 const split_keywords = [
   "split",
@@ -28,4 +30,4 @@ async function makeDecision(prevDecision, curround) {
   return "betray";
 }
 
-module.exports = { makeDecision };
+module.exports = { makeDecision, name };

@@ -1,3 +1,5 @@
+const name = "Manual"
+
 const readline = require("readline");
 
 // Function to get user decision
@@ -31,4 +33,4 @@ async function makeDecision() {
 }
 
 // Export the makeDecision function for use in other modules
-module.exports = { makeDecision };
+module.exports = { makeDecision, name };
