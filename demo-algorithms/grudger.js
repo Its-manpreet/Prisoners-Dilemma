@@ -21,11 +21,15 @@ const steal_keywords = [
   "B",
 ];
 
+let betrayed = false
+
 async function makeDecision(prevDecision, curround) {
-  // Implement your second algorithm logic here
-  // You can use user input, randomization, or any strategy you prefer
-  // round number starts from 0 eg- 0,1,2
-  return "betray";
+  if (steal_keywords.includes(prevDecision) || betrayed){
+    betrayed = true
+    return "betray";
+  } else {
+    return "split"
+  }
 }
 
 module.exports = { makeDecision };

@@ -22,10 +22,11 @@ const steal_keywords = [
 ];
 
 async function makeDecision(prevDecision, curround) {
-  // Implement your second algorithm logic here
-  // You can use user input, randomization, or any strategy you prefer
-  // round number starts from 0 eg- 0,1,2
-  return "betray";
+  if (steal_keywords.includes(prevDecision) && Math.random() > 0.9 ){
+    return "betray"
+  } else {
+    return curround === 0 ? "cooperate" : prevDecision
+  }
 }
 
 module.exports = { makeDecision };

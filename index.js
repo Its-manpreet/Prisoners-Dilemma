@@ -1,5 +1,4 @@
 // Prisoner's Dilemma Game
-const utils = require("./src/utils.js"); // Import utility functions
 const game = require("./src/gameloop.js"); // Import the game logic
 const config = require("./config/main.json"); // Load configuration settings
 
@@ -15,21 +14,26 @@ async function runGame(rounds) {
   let player1Score = 0;
   let player2Score = 0;
 
+  let player1move
+  let player2move
+
   // Loop through the specified number of rounds
   for (let i = 0; i < rounds; i++) {
     // Play a round and get scores
-    const roundScores = await game.playRound(algorithm1, algorithm2);
+    const round = await game.playRound(algorithm1, algorithm2, i, player1move, player2move);
 
     // Update total scores for each player
-    player1Score += roundScores.player1;
-    player2Score += roundScores.player2;
+    player1Score += round.player1Score;
+    player2Score += round.player2Score;
+
+    //get the last move
+    player1move = round.player1move;
+    player2move = round.player2move;
 
     // Print scores after each round
-    console.log(`Player 1 score: ${player1Score}`);
-    console.log(`Player 2 score: ${player2Score}`);
-
-    // Pause for a short time between rounds for better readability
-    await utils.sleep(1000);
+    if (config.per_round_scores) console.log("=== New Round ===");
+    if (config.per_round_scores) console.log(`Player 1 score: ${player1Score}`);
+    if (config.per_round_scores) console.log(`Player 2 score: ${player2Score}`);
   }
 
   console.log("=== Game Over ===");

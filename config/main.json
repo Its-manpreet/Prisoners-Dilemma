@@ -1,5 +1,7 @@
 {
-  "rounds": 3,
-  "algorithm1": "manual.js",
+  "rounds": 5,
+  "show_choices": false,
+  "per_round_scores": false,
+  "algorithm1": "example.js",
   "algorithm2": "example.js"
 }
