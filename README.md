@@ -22,9 +22,15 @@ node index.js
 
 ```json
 {
-  "rounds": 3,
-  "algorithm1": "manual.js",
-  "algorithm2": "example.js"
+  "rounds": 5,
+  "show_choices": false,
+  "per_round_scores": false,
+  "algorithm1": "example.js",
+  "algorithm2": "example.js",
+  "tournament": true,
+  "include_self_matches": true,
+  "show_tournaments_members": false,
+  "show_tournaments_round_scores": false
 }
 ```
 
@@ -43,6 +49,10 @@ node index.js
 - Algorithms for each player are stored in the algorithms directory.
 - You can create custom algorithms by implementing the makeDecision function in separate files.
 - Sample algorithms (manual.js and example.js) are provided for reference.
+
+## Tournaments
+
+This project includes a tournament system where algorithms compete against each other. You can enable or disable the tournament in the configuration file (main.json). To view tournament results, check the console output or `tournamentResults.txt`.
 
 ## Folder Structure
 
